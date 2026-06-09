@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from "./scr/Presentation/views/home/Home";
 import { RegisterScreen } from "./scr/Presentation/views/register/Regiser";
+import AlterarSenhaScreen from './scr/Presentation/views/AlterarSenha/AlterarSenha';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -29,6 +30,10 @@ const App = () => {
             headerShown: true,
             title: 'Novo usuário',
           }}
+        />
+        <Stack.Screen
+          name='AlterarSenha'
+          component={AlterarSenhaScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
