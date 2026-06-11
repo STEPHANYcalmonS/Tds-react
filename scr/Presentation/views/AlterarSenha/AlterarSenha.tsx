@@ -1,14 +1,9 @@
 import React from "react";
-import {
-    StyleSheet,
-    View,
-    Text,
-    Image,
-} from "react-native";
+import { StyleSheet, View, Text,Image, } from "react-native";
 
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
-import { RootStackParamList } from '../../../../App';
+import { RootStackParamList } from '../../../../Aula01_App';
 
 // Componentes
 import { COLORS } from "../../theme/Apptheme";
@@ -22,14 +17,7 @@ export const AlterarSenhaScreen = () => {
 
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
-    const {
-        token,
-        usuario,
-        novaSenha,
-        confirmarSenha,
-        onChange,
-        alterarSenha
-    } = AlterarSenhaViewModel();
+    const { token, usuario, novaSenha, confirmarSenha, onChange,alterarSenha } = AlterarSenhaViewModel();
 
     return (
         <View style={styles.container}>
@@ -115,7 +103,7 @@ const styles = StyleSheet.create({
 
     frm: {
         width: '100%',
-        height: '50%',
+        height: '55%',
         backgroundColor: COLORS.bgColor,
         position: 'absolute',
         bottom: 0,

@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, TextInput, Button, ToastAndroid, Platfor
 // Importação dos elementos de navegação
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../../../App';
+import { RootStackParamList } from '../../../../Aula01_App';
 
 // Componente 
 import { COLORS } from "../../theme/Apptheme";
@@ -37,17 +37,6 @@ export const HomeScreen = () => {
                 source={require('../../../../assets/bg-smartphone.jpg')}
                 style={styles.imgBg}
             />
-
-            <View style={styles.logoContainer}>
-                <Image
-                    source={require('../../../../assets/img/logo.png')}
-                    style={styles.logoImg}
-                />
-
-                <Text style={styles.logoTxt}>
-                    Restaurante | Pizzaria Tito
-                </Text>
-            </View>
 
             <View style={styles.frm}>
                 <Text style={styles.frmTitle}>
@@ -87,8 +76,15 @@ export const HomeScreen = () => {
                     <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                     <Text style={styles.txtRegistre}> Registre-se</Text>
                     </TouchableOpacity>
-
                 </View>
+
+                <View style={styles.frmRegistre}>
+                    <Text>Esqueceu sua senha?</Text>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('PassagemEmail')}>
+                    <Text style={styles.txtRegistre}> Alterar Senha</Text>
+                    </TouchableOpacity>
+                </View>                
             </View>
         </View>
     );
@@ -108,28 +104,9 @@ const styles = StyleSheet.create({
         position: 'absolute',
     },
 
-    logoContainer: {
-        position: 'absolute',
-        alignSelf: 'center',
-        top: '15%',
-        alignItems: 'center',
-    },
-
-    logoImg: {
-        width: 100,
-        height: 100,
-    },
-
-    logoTxt: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: COLORS.primary,
-        marginTop: 10,
-    },
-
     frm: {
         width: '100%',
-        height: '40%',
+        height: '45%',
         backgroundColor: COLORS.bgColor,
         position: 'absolute',
         bottom: 0,
@@ -147,7 +124,7 @@ const styles = StyleSheet.create({
     frmRegistre: {
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: 15,
+        marginTop: 10,
     },
 
     txtRegistre: {

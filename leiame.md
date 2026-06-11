@@ -23,3 +23,6 @@ Navigating Between Screens · React Native
  
 # Inicializando o APP sem cache
  npx expo start -c
+
+# Pacotes para GBS
+ npx expo install expo-location
