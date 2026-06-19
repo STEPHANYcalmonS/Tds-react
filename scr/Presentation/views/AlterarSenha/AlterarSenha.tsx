@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text,Image, } from "react-native";
+import { StyleSheet, View, Text, Image, } from "react-native";
 
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
@@ -14,12 +14,12 @@ import { CustomTextInput } from "../../components/CustomTextInput";
 import AlterarSenhaViewModel from "./ViewModel";
 
 export const AlterarSenhaScreen = () => {
-    
+
     // Hook de navegação tipada
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
     // Desestrutura os dados e funções vindos do ViewModel
-    const { token, usuario, novaSenha, confirmarSenha, onChange,alterarSenha } = AlterarSenhaViewModel();
+    const { token, usuario, novaSenha, confirmarSenha, onChange, alterarSenha } = AlterarSenhaViewModel();
 
     return (
         <View style={styles.container}>
